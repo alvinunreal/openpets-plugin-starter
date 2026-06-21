@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 3,
+  "id": "yourname.hello-pet",
+  "name": "$t:plugin.name",
+  "description": "$t:plugin.description",
+  "version": "1.0.0",
+  "runtime": "javascript",
+  "icon": "sparkles",
+  "sdkVersion": "3.0.0",
+  "entry": "index.js",
+  "permissions": ["pet:speak", "pet:reaction", "commands", "status"],
+  "assets": {
+    "icons": {
+      "starter": "assets/icon.svg"
+    }
+  },
+  "configSchema": {
+    "greeting": {
+      "type": "text",
+      "label": "$t:config.greeting.label",
+      "description": "$t:config.greeting.description",
+      "default": "Hello from my first OpenPets plugin!",
+      "maxLength": 120
+    },
+    "reactOnStart": {
+      "type": "boolean",
+      "label": "$t:config.reactOnStart.label",
+      "description": "$t:config.reactOnStart.description",
+      "default": true
+    }
+  }
+}

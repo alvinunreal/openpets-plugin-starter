@@ -1,0 +1,12 @@
+{
+  "plugin.name": "Hello Pet Starter",
+  "plugin.description": "A tiny starter plugin that adds one pet command and a configurable greeting.",
+  "config.greeting.label": "Greeting",
+  "config.greeting.description": "What your pet says when the command runs.",
+  "config.reactOnStart.label": "Wave on start",
+  "config.reactOnStart.description": "Make the pet wave when the plugin starts.",
+  "commands.sayHello.title": "Say Hello",
+  "commands.sayHello.description": "Ask your pet to say your configured greeting.",
+  "status.ready": "Hello Pet is ready",
+  "status.greeted": "Greeting sent"
+}
