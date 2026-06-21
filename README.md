@@ -33,7 +33,10 @@ package.json          # Local test dependencies
 4. If your plugin uses the network, add exact hosts under `network.hosts`.
 5. Replace `assets/icon.svg` with your own bundled SVG icon.
 
-## Test locally
+## Test the plugin files
+
+You can build and test a plugin without cloning the OpenPets source repo.
+Install this starter's test dependencies once:
 
 Install dependencies:
 
@@ -47,22 +50,44 @@ Run the smoke test:
 npm test
 ```
 
-Validate the plugin with the OpenPets CLI:
+Validate the plugin package with the OpenPets CLI:
 
 ```bash
 npx -y @open-pets/cli plugin validate .
 ```
 
-## Run in OpenPets dev mode
+## Run inside the OpenPets desktop app
 
-From an OpenPets checkout:
+To see the plugin with a real pet, install/open OpenPets and load this folder
+directly. You still do **not** need to clone OpenPets.
+
+In OpenPets:
+
+1. Open **Tray → Plugins**.
+2. Open **Developer Mode**.
+3. Click **Load Folder**.
+4. Select this `openpets-plugin-starter` folder.
+
+OpenPets validates the manifest, snapshots the declared files into app data,
+watches this source folder, and reloads after edits. Enable the plugin if it is
+off, then right-click your pet to run the **Say Hello** command.
+
+If you want to force a re-read after editing, click **Refresh** on the local
+plugin card or **Refresh from Folder** in its configuration view.
+
+### If you already have an OpenPets checkout
+
+The installed desktop flow above is recommended. If you are working on OpenPets
+itself, you can still run the maintainer dev app with this plugin loaded from
+its absolute path:
 
 ```bash
 OPENPETS_DEV_PLUGIN_PATHS=/absolute/path/to/openpets-plugin-starter pnpm dev:desktop
 ```
 
-Then open **Tray → Plugins**, enable the plugin, and right-click your pet to run
-the **Say Hello** command.
+Do not copy your plugin into `node_modules` or mount the full OpenPets checkout
+inside another OS/VM. Keep one normal OpenPets app checkout and one normal plugin
+repo checkout.
 
 ## Submit to the OpenPets catalog
 
