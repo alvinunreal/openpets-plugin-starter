@@ -103,8 +103,28 @@ When your plugin is ready:
    - Requested permissions and why each one is needed.
    - Network hosts and what each host is used for.
    - Any external account setup users need.
-4. Submit it from the OpenPets plugin submission page:
-   <https://openpets.dev/plugins/submit>
+4. Submit it with the OpenPets GitHub issue template. The form opens on the
+   OpenPets repository and asks for the review packet below:
+   <https://github.com/alvinunreal/openpets/issues/new?template=plugin_submission.yml>
+
+Copy/paste checklist:
+
+```text
+Plugin name:
+Plugin id:
+GitHub repo URL:
+Plugin subdirectory: .
+Release tag or commit SHA:
+
+Requested permissions:
+- permission-name: why it is needed
+
+Network hosts:
+- None, or host.example.com: what it is used for
+
+External account setup:
+- None, or explain OAuth/API setup users must complete
+```
 
 OpenPets users install reviewed, hash-pinned ZIP packages from the OpenPets
 catalog. Your GitHub repo remains the source/provenance for review and future
